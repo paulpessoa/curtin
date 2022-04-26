@@ -1,11 +1,15 @@
 import './App.css';
+import Header from './layout/Header';
+import Content from './layout/Content';
+import Footer from './layout/Footer';
 
 function App() {
   return (
-    <>
-      <h1>Curtin</h1>
-      <p>URL Shortener</p>
-    </>
+    <div className="App">
+      <Header />
+      <Content />
+      <Footer />
+    </div>
   );
 }
 
