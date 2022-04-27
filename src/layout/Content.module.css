@@ -1,0 +1,91 @@
+.content {
+    height: 80vh;
+    background-color: #f0f0f0;
+}
+
+.box_content{
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px;
+    max-width: 450px;
+    border-radius: 8px;
+}
+
+.form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column  ;
+    margin: 0 auto;
+}
+
+.custom_link{
+    display: flex;
+}
+
+.custom_link input{
+    width: 70%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.custom_link button{
+    width: 30%;
+}
+
+input, button {
+    border-radius: 6px;
+    padding: 8px;
+    margin: 4px;
+    border: #f0f0f0 solid 2px;
+    text-align: center;
+}
+
+input[type=text]{
+    border: #00b600 dashed 2px;
+}
+
+button {
+    cursor: pointer;
+    transition: ease 0.2s;
+    background-color:#007eac ;
+    border: 2px solid #007eac ;
+    color: #fff;
+    
+}
+
+button:hover {
+    background-color:#228fb7 ;
+    border: 2px solid #228fb7 ;
+    transition: ease 0.2s;
+}
+
+.box_short_url{
+    display: none;
+    margin: 0 auto;
+    padding: 10px;    
+}
+
+.box_short_url input{
+    width: 80%;
+}
+
+.box_short_url button{
+    width: 20%;
+    
+}
+
+.box_qrcode {
+    display: none;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.qrcode_image {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Qr-2.svg/1024px-Qr-2.svg.png');
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+    margin: 10px auto;
+}

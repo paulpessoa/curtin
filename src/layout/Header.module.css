@@ -1,4 +1,25 @@
 .container {
-    background-color: rgb(0, 126, 172);
+    height: 15vh;
+    background-color: #f0f0f0;
+    padding: 10px;
 }
 
+.navmenu {
+    display: flex;
+    max-width: 1240px;
+    margin: 10px auto;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+h1 {
+    color: #007eac;
+    margin: 10px;
+}
+
+
+.logo {
+    width: 50px;
+}

@@ -1,6 +1,11 @@
+import React from 'react';
+import styles from './Footer.module.css'
+
 function Footer () {
     return (
-        <p>footer</p>
+        <div className={styles.container}>
+            <p>Share with your friends</p>
+        </div>
     )
 }
 
