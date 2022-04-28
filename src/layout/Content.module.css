@@ -1,13 +1,9 @@
-.content {
-    height: 80vh;
-    background-color: #f0f0f0;
-}
 
 .box_content{
     margin: 0 auto;
     background-color: #fff;
     padding: 10px;
-    max-width: 450px;
+    max-width: 400px;
     border-radius: 8px;
 }
 
@@ -38,11 +34,10 @@ input, button {
     margin: 4px;
     border: #f0f0f0 solid 2px;
     text-align: center;
+    outline: none !important;
+    font-size: 14px;
 }
 
-input[type=text]{
-    border: #00b600 dashed 2px;
-}
 
 button {
     cursor: pointer;
@@ -61,29 +56,28 @@ button:hover {
 
 .box_short_url{
     display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 0 auto;
     padding: 10px;    
 }
 
 .box_short_url input{
-    width: 80%;
+    width: 100%;
 }
 
-.box_short_url button{
-    width: 20%;
-    
+button{
+    padding: 8px 24px;
 }
+
 
 .box_qrcode {
     display: none;
     flex-direction: column;
     margin: 10px;
-    padding: 10px;
-    border-radius: 6px;
 }
 
-.qrcode_image {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Qr-2.svg/1024px-Qr-2.svg.png');
+.qrcode_image img {
     background-size: cover;
     height: 250px;
     width: 250px;
