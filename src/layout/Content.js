@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Content.module.css';
-
+import axios from "axios";
 
 function Content() {
 const saveQR = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Qr-2.svg/1024px-Qr-2.svg.png"
@@ -45,13 +45,12 @@ const saveQR = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Qr-2.s
 
           <div id='box_qrcode' className={styles.box_qrcode}>
             <div className={styles.qrcode_image}>
-              <img src={saveQR}/>
+              <img src={saveQR} alt="oi"/>
             </div>
 
-            <a href={saveQR} target="_blank" type='image/png' download="image/png"> 
+            <a href={saveQR} target="_blank" without rel="noopener noreferrer" type='image/png' download="image/png"> 
               <button type='submit'>Download QR Code</button>
-            </a>  
-            
+            </a>            
           </div>
 
         </div>
