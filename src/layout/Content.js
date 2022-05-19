@@ -13,24 +13,29 @@ function Content() {
       
       const url = `https://curtin.herokuapp.com/shorten/?url=${longURL}&hash=${hashURL}`;
       let resURL
+      let ErrorServer 
      await axios.post(url) 
       .then((res) => {
         resURL = res.data 
-        console.log(resURL)
-      })
-      .catch( (error) => {
-        console.error(Error(error))
-      }) 
-      
-      getShortUrl(e, resURL)
-      
+      //  console.log(resURL)
+    })
+    .catch(async (error) => {
+      ErrorServer = error.response.data.error.message;
+      //console.error('Aqui é o catch', error.response.data.error.message)
+     document.getElementById("hash_url").style.border = "red dashed 2px";
+     await alert(ErrorServer)
+    })    
+      if (!ErrorServer) {
+        getShortUrl(e, resURL)
+      }
     } 
     
     function getShortUrl (e,resURL) {
       e.preventDefault()
-      document.getElementById("url_curta").value = resURL.shortened_url;
-      document.getElementById("qrCode").src = resURL.qr_code_url;
-      
+     document.getElementById("url_curta").value = resURL.shortened_url;
+     document.getElementById("qrCode").src = resURL.qr_code_url;
+     // console.log('Resposta do Servidor', resURL)
+    
       }
       
 
@@ -43,11 +48,11 @@ function Content() {
         document.getElementById("url_curta").style.border = "#00b600 dashed 2px";
       }
 
-      function displayQR (e) {
+    /*  function displayQR (e) {
         e.preventDefault()
         document.getElementById("box_qrcode").style.display = "flex";        
       }
-
+*/
 
       return (
 
@@ -64,6 +69,7 @@ function Content() {
                 <input id="hash_url" type="text" name="link" placeholder='curtin.com/CUSTOMLINK' />
                 <button className="buttonStandard" type='submit' >Shorten</button>
             </div>
+                <div>sd</div>
           </form>
 
           <div id='box_short_url' className={styles.box_short_url}>
