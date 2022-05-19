@@ -1,47 +1,41 @@
 .container {
     background-color: #f0f0f0;
-    padding: 32px 0px 16px;
+    padding: 20px 0px 0px;
 }
 
 .navmenu {
     display: flex;
     flex-direction: column;
     max-width: 1240px;
-    margin: 10px auto;
+    margin: 10px auto 0px;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+a {
+  text-decoration: none;
+}
 
-
-
-
-h1 {
+/* h1 {
     color: #007eac;
     font-weight: 500;
     margin-top: 10px;
     font-size: 18px;
+    transform: scale(1.0);
+    transition: .2s ease;
 }
+*/
 
 
 .logo {
-    width: 130px;
+    width: 150px;
     border-radius: 8px;
-    animation: rotation 8s infinite linear;
+    transform: scale(1.0);
+    transition: .2s ease;
 }
-/*
-@keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
 
-  */
-
-
-
-  
+.logo:hover{
+  transform: scale(1.05);
+  transition: .3s ease;
+}

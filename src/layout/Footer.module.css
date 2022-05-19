@@ -1,14 +1,14 @@
 .container {
     background-color: #f0f0f0;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
+    display: block;
+    flex-direction: row;
     bottom: 10px;
 }
 
 .container p{
     color: #007eac;
-    margin: 10px auto 6px;
+    margin: 6px auto 6px;
 }
 
 .container a {

@@ -44,7 +44,7 @@ input, button {
     display: none;
     color: red;
     padding: 10px;
-    margin: 10px 4px;
+    margin: 4px;
     background-color: #ffdfdf;
     border-radius: 6px;
     padding: 8px;
@@ -87,11 +87,30 @@ button{
     flex-direction: column;
     margin-bottom: 10px;    
 }
+input:focus  {
+    background-color: #cccccc3b;
+    border: #cccccc3b 2px solid;   
+}
+
+input:hover  {
+    background-color: #b0eaff3b;
+    border: #b0eaff3b 2px solid;
+}
+
+
+
 
 .qrcode_image img {
     background-size: cover;
-    height: 250px;
-    width: 250px;
+    height: 180px;
+    width: 180px;
     margin: 0px auto;
     cursor: pointer;
+    transform: scale(1.00);
+    transition: .2s ease;
+}
+
+.qrcode_image img:hover {
+    transform: scale(1.05);
+    transition: .4s ease;
 }
