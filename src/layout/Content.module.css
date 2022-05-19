@@ -55,7 +55,7 @@ button:hover {
 }
 
 .box_short_url{
-    display: none;
+    display: flex; /* mudar para none e adicioanr funçao para exibir no js*/
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
@@ -72,7 +72,7 @@ button{
 
 
 .box_qrcode {
-    display: none;
+    display: flex; /* mudar para none e adicioanr funçao para exibir no js*/
     flex-direction: column;
     margin: 10px;
 }
