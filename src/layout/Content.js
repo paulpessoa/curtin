@@ -85,42 +85,33 @@ function Content() {
       return (
         <div className={styles.content}>
         <div className={styles.box_content}>          
+          {/* ------ CUSTOM AND SEND URL ------ */}
           <form className={styles.form} onSubmit={submitUrl} method="post">
-            
             <input id="long_url" type="url" name="link" placeholder='Type or paste long URL' required/>
             <div className={styles.custom_link}>
                 <input id="hash_url" type="text" name="link" placeholder='Custom Link (Optional)' />
                 <button className="buttonStandard" type='submit' >Shorten</button>
             </div>
-
             <div id='spanError' className={styles.spanError}>
                 <span>This name already exists!</span>
             </div>
-
           </form>
-
+          {/* ------ URL SHORTENED BOX ------ */}
           <div id='box_short_url' className={styles.box_short_url}>
             <input id="url_short" type="text" name="link" placeholder='curtin.com/CUSTOMLINK'/>
             <button onClick={copyButton}>Copy</button>
             <button onClick={clearButton}>Clear</button>
             <button onClick={qrButton}>QR Code</button>
           </div>
-
+          {/* ------ QR CODE BOX ------ */}
           <div id='box_qrcode' className={styles.box_qrcode}>
-            <div className={styles.qrcode_image}>
-            <a id="qr_link" href="https://" target="_blank" rel="noopener noreferrer">  
-              <img id='qrCode' alt="QR_CODE"/>
-            </a>  
-              
-            
-            
-            </div>
-
-            
-              <button onClick={qrDownload} type='submit'>Download QR Code</button>
-                     
+              <div className={styles.qrcode_image}>
+                  <a id="qr_link" href="https://" target="_blank" rel="noopener noreferrer">  
+                      <img id='qrCode' alt="QR_CODE"/>
+                  </a>            
+              </div>    
+              <button onClick={qrDownload} type='submit'>Download QR Code</button>       
           </div>
-
         </div>
     </div>
   );
