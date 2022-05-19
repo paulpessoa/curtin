@@ -37,8 +37,10 @@ function Content() {
      document.getElementById("spanError").style.display = "none";
      document.getElementById("url_short").value = resURL.shortened_url;
      document.getElementById("qrCode").src = resURL.qr_code_url;
+     document.getElementById("qr_link").href = resURL.shortened_url;
      document.getElementById("hash_url").style.border = "#f0f0f0 solid 2px";    
-     document.getElementById("url_short").style.border = "#f0f0f0 solid 2px";    
+     document.getElementById("url_short").style.border = "#f0f0f0 solid 2px";  
+       
     }
     
     //This function copy the shorURL input value.
@@ -58,17 +60,28 @@ function Content() {
     }
     
     //This function show the QR Code.
-    function qrButton (e) {
+    function qrButton (e, resURL) {
       e.preventDefault()
-      document.getElementById("box_qrcode").style.display = "flex";        
+      document.getElementById("box_qrcode").style.display = "flex";             
       document.getElementById("hash_url").style.border = "#f0f0f0 solid 2px";    
       document.getElementById("url_short").style.border = "#f0f0f0 solid 2px";    
     }
     //This function download the QR Code image file.
-    function qrDownload () {
-      alert('Função em Desenvolvimento')   
-    }
+   async function qrDownload (imageSrc) {
+      imageSrc = document.getElementById("qrCode").src;
+      const image = await fetch(imageSrc)
+      const imageBlog = await image.blob()
+      const imageURL = URL.createObjectURL(imageBlog)
+    
+      const link = document.createElement('a')
+      link.href = imageURL
+      link.download = 'QR Code Curtin'
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
 
+    }
+    
       return (
         <div className={styles.content}>
         <div className={styles.box_content}>          
@@ -95,12 +108,17 @@ function Content() {
 
           <div id='box_qrcode' className={styles.box_qrcode}>
             <div className={styles.qrcode_image}>
+            <a id="qr_link" href="https://" target="_blank" rel="noopener noreferrer">  
               <img id='qrCode' alt="QR_CODE"/>
+            </a>  
+              
+            
+            
             </div>
 
-            <a id="linkQR" href="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https://curtin.herokuapp.com/eieieieiei" target="_blank" rel="noopener noreferrer" download> 
+            
               <button onClick={qrDownload} type='submit'>Download QR Code</button>
-            </a>            
+                     
           </div>
 
         </div>

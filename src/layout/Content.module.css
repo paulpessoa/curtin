@@ -66,11 +66,11 @@ button:hover {
 }
 
 .box_short_url{
-    display: flex; /* hide empty short link */
+    display: none; /* hide empty short link */
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 10px;    
+    padding: 10px;
 }
 
 .box_short_url input{
@@ -83,9 +83,9 @@ button{
 
 
 .box_qrcode {
-    display: flex; /* hide empty QR Code */
+    display: none; /* hide empty QR Code */
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 10px;    
 }
 
 .qrcode_image img {
@@ -93,4 +93,5 @@ button{
     height: 250px;
     width: 250px;
     margin: 0px auto;
+    cursor: pointer;
 }
