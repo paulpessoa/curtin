@@ -15,6 +15,7 @@
 
 .custom_link{
     display: flex;
+    padding: 0;
 }
 
 
@@ -65,7 +66,7 @@ button:hover {
 }
 
 .box_short_url{
-    display: none; /* hide empty short link */
+    display: flex; /* hide empty short link */
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
@@ -82,14 +83,14 @@ button{
 
 
 .box_qrcode {
-    display: none; /* hide empty QR Code */
+    display: flex; /* hide empty QR Code */
     flex-direction: column;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
 .qrcode_image img {
     background-size: cover;
     height: 250px;
     width: 250px;
-    margin: 10px auto;
+    margin: 0px auto;
 }
