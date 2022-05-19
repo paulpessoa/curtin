@@ -8,6 +8,14 @@
   font-family: 'Raleway', sans-serif;
 }
 
+.App{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
 body{
   background-color: #f0f0f0;
 }

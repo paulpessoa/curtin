@@ -1,4 +1,3 @@
-
 .box_content{
     margin: 0 auto;
     background-color: #fff;
@@ -17,6 +16,7 @@
 .custom_link{
     display: flex;
 }
+
 
 .custom_link input{
     width: 70%;
@@ -39,6 +39,16 @@ input, button {
 }
 
 
+.spanError {
+    display: none;
+    color: red;
+    padding: 10px;
+    margin: 10px 4px;
+    background-color: #ffdfdf;
+    border-radius: 6px;
+    padding: 8px;
+}
+
 button {
     cursor: pointer;
     transition: ease 0.2s;
@@ -55,7 +65,7 @@ button:hover {
 }
 
 .box_short_url{
-    display: flex; /* mudar para none e adicioanr funçao para exibir no js*/
+    display: none; /* hide empty short link */
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
@@ -72,7 +82,7 @@ button{
 
 
 .box_qrcode {
-    display: flex; /* mudar para none e adicioanr funçao para exibir no js*/
+    display: none; /* hide empty QR Code */
     flex-direction: column;
     margin: 10px;
 }
