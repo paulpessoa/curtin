@@ -7,25 +7,28 @@ function Content() {
   //This function sends longURL to the server.
   async function submitUrl (e) {
       e.preventDefault()
-      document.getElementById("box_short_url").style.display = "flex";
+   
       const longURL = document.getElementById('long_url').value;
       const hashURL = document.getElementById('hash_url').value;
       const url = `https://curtin.herokuapp.com/shorten/?url=${longURL}&hash=${hashURL}`;
       let resURL
       let ErrorServer 
-     await axios.post(url) 
+      await axios.post(url) 
       .then((res) => {
         resURL = res.data 
-      //  console.log(resURL)
-    })
-    .catch((error) => {
-      ErrorServer = error.response.data.error.message;
-      //console.error('Aqui é o catch', error.response.data.error.message)
+        //  console.log(resURL)
+      })
+      .catch((error) => {
+        ErrorServer = error.response.data.error.message;
+        //console.error('Aqui é o catch', error.response.data.error.message)
       document.getElementById("hash_url").style.border = "red dashed 2px";
       document.getElementById("spanError").style.display = "block";
+      document.getElementById("box_short_url").style.display = "none";
+      document.getElementById("box_qrcode").style.display = "none";        
     })    
     if (!ErrorServer) {
       getShortUrl(e, resURL)
+      document.getElementById("box_short_url").style.display = "flex";
     }
   } 
   
@@ -95,7 +98,7 @@ function Content() {
               <img id='qrCode' alt="QR_CODE"/>
             </div>
 
-            <a id="linkQR" href="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https://curtin.herokuapp.com/eieieieiei" target="_blank" rel="noopener noreferrer" type='image/png' download="image/png"> 
+            <a id="linkQR" href="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https://curtin.herokuapp.com/eieieieiei" target="_blank" rel="noopener noreferrer" download> 
               <button onClick={qrDownload} type='submit'>Download QR Code</button>
             </a>            
           </div>
