@@ -1,9 +1,9 @@
 .container {
-    height: 5VH;
     background-color: #f0f0f0;
     padding: 10px;
     display: flex;
     flex-direction: column;
+    bottom: 10px;
 }
 
 .container p{
@@ -14,4 +14,6 @@
 .container a {
     text-decoration: none;
     color: #646464;
+    font-size: 14px;
+    line-height: 1.5;
 }

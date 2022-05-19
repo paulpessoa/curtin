@@ -1,6 +1,7 @@
 {
   "short_name": "Curtin",
   "name": "Curtin - Link Shortener",
+  "description": "A simply url shortener",
   "icons": [
     {
       "src": "favicon.ico",
@@ -17,7 +18,10 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ],
+  ], 
+  "related_applications": [{
+    "platform": "web"
+  }],
   "scope": "/",
   "start_url": "/",
   "display": "standalone",

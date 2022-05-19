@@ -5,6 +5,7 @@
 
 .navmenu {
     display: flex;
+    flex-direction: column;
     max-width: 1240px;
     margin: 10px auto;
     align-items: center;
@@ -15,16 +16,18 @@
 
 h1 {
     color: #007eac;
-    margin-left: 10px;
-    font-size: 24px;
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 18px;
 }
 
 
 .logo {
-    width: 50px;
+    width: 130px;
+    border-radius: 8px;
     animation: rotation 8s infinite linear;
 }
-
+/*
 @keyframes rotation {
     from {
       transform: rotate(0deg);
@@ -33,3 +36,5 @@ h1 {
       transform: rotate(359deg);
     }
   }
+
+  */

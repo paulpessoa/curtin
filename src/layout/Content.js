@@ -76,7 +76,7 @@ function Content() {
             
             <input id="long_url" type="url" name="link" placeholder='Type or paste long URL' required/>
             <div className={styles.custom_link}>
-                <input id="hash_url" type="text" name="link" placeholder='curtin.com/CUSTOMLINK' />
+                <input id="hash_url" type="text" name="link" placeholder='Custom Link (Optional)' />
                 <button className="buttonStandard" type='submit' >Shorten</button>
             </div>
 
