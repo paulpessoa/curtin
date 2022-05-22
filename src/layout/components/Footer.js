@@ -4,8 +4,7 @@ import styles from './Footer.module.css'
 function Footer () {
     return (
         <div className={styles.container}>
-            <p>Developed by</p>
-              
+            <p>Developed by</p> 
             <span>
                 <a href="https://devjean.com" target="_blank" rel="noopener noreferrer"> Jean Carlos (Back) </a>
                  | 

@@ -1,4 +1,4 @@
-import { Navigate, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "../layout/pages/Home"
 import Error404 from "../layout/pages/Error404"
@@ -14,5 +14,3 @@ function Routers(){
 }
 
 export default Routers;
-
-//******************************** */

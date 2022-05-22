@@ -1,9 +1,7 @@
 .error404 {
     max-width: 60vw;
   }
-
-
-
+  
 .error404 {
   transform: scale(1.00);
   transition: .2s ease;
